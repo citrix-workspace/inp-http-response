@@ -1,3 +1,3 @@
 ## typescript-package-bolerplate
 
-Minimalistic boilerplate to jump-start a library project in Node Js with TypeScript.
+Minimalistic boilerplate to jump-start a packages in Node Js with TypeScript.
