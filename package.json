@@ -1,0 +1,52 @@
+{
+  "name": "",
+  "version": "0.0.1",
+  "description": "",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "mocha --require ts-node/register __tests__/**/*.spec.ts",
+    "test:coverage": "nyc npm test",
+    "lint": "eslint . --ext .js,.ts"
+  },
+  "nyc": {
+    "reporter": [
+      "text",
+      "html",
+      "json"
+    ],
+    "exclude": [
+      "__tests__/**/*"
+    ],
+    "require": [
+      "ts-node/register"
+    ],
+    "extension": [
+      ".ts"
+    ],
+    "sourceMap": true,
+    "instrument": true
+  },
+  "keywords": [],
+  "author": "Leo Jaimesson Sousa da Silva",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/chai": "^4.1.7",
+    "@types/mocha": "^5.2.6",
+    "@typescript-eslint/eslint-plugin": "^1.7.0",
+    "@typescript-eslint/parser": "^1.7.0",
+    "chai": "^4.2.0",
+    "eslint": "^5.16.0",
+    "eslint-config-prettier": "^4.2.0",
+    "eslint-plugin-prettier": "^3.0.1",
+    "husky": "^2.1.0",
+    "mocha": "^6.1.4",
+    "nyc": "^14.0.0",
+    "ts-node": "^8.1.0",
+    "typescript": "^3.4.5"
+  },
+  "contributors": [
+    "Leo Jaimesson Sousa da Silva"
+  ]
+}
