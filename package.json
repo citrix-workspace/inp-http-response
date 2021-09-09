@@ -1,7 +1,7 @@
 {
-  "name": "",
+  "name": "inp-http-response",
   "version": "0.0.1",
-  "description": "",
+  "description": "HttpResponse class for InP communication with utility and factory functions.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
@@ -58,5 +58,8 @@
   },
   "contributors": [
     "Vojtech.Soban@citrix.com"
-  ]
+  ],
+  "dependencies": {
+    "inp-commons": "0.0.1"
+  }
 }
