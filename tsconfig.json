@@ -9,7 +9,7 @@
 		"declaration": true,
 		"outDir": "./dist",
 		// stop processing @types in node_modules
-		"types": ["mocha"]
+		"types": ["mocha", "node"]
 	},
 	"include": [
 		"src/**/*"
