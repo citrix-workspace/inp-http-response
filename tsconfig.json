@@ -2,11 +2,14 @@
 	"compilerOptions": {
 		"module": "commonjs",
 		"lib": [
+			"es6",
 			"dom"
 		],
-		"target": "es2020",
+		"target": "es2019",
 		"declaration": true,
-		"outDir": "./dist"
+		"outDir": "./dist",
+		// stop processing @types in node_modules
+		"types": ["mocha"]
 	},
 	"include": [
 		"src/**/*"
