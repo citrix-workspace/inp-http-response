@@ -47,6 +47,10 @@ export function ok(body, headers = {}) {
     return new HttpResponse({statusCode: 200, body, headers})
 }
 
+export function okJson(body: any): HttpResponse {
+	return ok(typeof body === 'string' ? body : JSON.stringify(body), {'Content-Type': 'application/json'})
+}
+
 export function created(body, headers = {}) {
     return new HttpResponse({statusCode: 201, body, headers})
 }

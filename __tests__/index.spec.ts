@@ -1,5 +1,5 @@
 import {expect} from 'chai'
-import {accepted, badRequest, created, HttpResponse, noContent, ok, withHttpResponse} from '../src'
+import {accepted, badRequest, created, HttpResponse, noContent, ok, okJson, withHttpResponse} from '../src'
 
 describe('HttpResponse', () => {
     describe('HTTP headers', () => {
@@ -79,6 +79,27 @@ describe('HttpResponse', () => {
                 "statusCode": 200,
             })
         })
+        it('okJson string', () => {
+				  expect(test(okJson, '{"a": true}')).to.be.deep.equal({
+					  body: "eyJhIjogdHJ1ZX0=",
+					  headers: [{name: 'Content-Type', value: 'application/json'}],
+					  statusCode: 200,
+				  })
+			  })
+  			it('okJson object', () => {
+			  	expect(test(okJson, {a: true})).to.be.deep.equal({
+				  	body: "eyJhIjp0cnVlfQ==",
+					  headers: [{name: 'Content-Type', value: 'application/json'}],
+					  statusCode: 200,
+		  		})
+	  		})
+		    it('okJson number', () => {
+				  expect(test(okJson, 123)).to.be.deep.equal({
+					  body: "MTIz",
+  					headers: [{name: 'Content-Type', value: 'application/json'}],
+	  				statusCode: 200,
+				  })
+			  })
         it('created', () => {
             expect(test(created, 'body')).to.be.deep.equal({
                 "body": "Ym9keQ==",

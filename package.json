@@ -1,6 +1,6 @@
 {
   "name": "inp-http-response",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "HttpResponse class for InP communication with utility and factory functions.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
